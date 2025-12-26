@@ -24,32 +24,35 @@ const Footer = () => {
             className: "hover:bg-red-500 hover:text-white"
         }
     ];
+    
     return (
-        <div className='flex justify-around items-center mt-9 pb-5'>
-            <div className="space-y-1">
-                <p className="flex items-center justify-center gap-1">
-                    Made with <IoHeartOutline className="text-red-500" /> by Sahbaj Khan
-                </p>
-                <p>© 2024 All rights reserved.</p>
-            </div>
+        <footer className='py-8 px-4 md:px-8 lg:px-16 border-t'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-6'>
+                <div className="text-center md:text-left">
+                    <p className="flex items-center justify-center md:justify-start gap-1 text-sm md:text-base">
+                        Made with <IoHeartOutline className="text-red-500" /> by Sahbaj Khan
+                    </p>
+                    <p className="text-gray-600 text-sm md:text-base mt-1">© 2024 All rights reserved.</p>
+                </div>
 
-            <div>
-                <div className='flex gap-4 justify-center md:justify-start'>
-                    {socialLinks.map((link, index) => (
-                        <a
-                            key={index}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={link.label}
-                            className={`h-12 w-12 bg-gray-100 rounded-full flex justify-center items-center text-xl transition-all duration-300 ${link.className} cursor-pointer shadow-md hover:shadow-lg transform hover:-translate-y-1`}
-                        >
-                            {link.icon}
-                        </a>
-                    ))}
+                <div>
+                    <div className='flex gap-3 md:gap-4'>
+                        {socialLinks.map((link, index) => (
+                            <a
+                                key={index}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={link.label}
+                                className={`h-10 w-10 md:h-12 md:w-12 bg-gray-100 rounded-full flex justify-center items-center text-lg md:text-xl transition-all duration-300 ${link.className} shadow-md hover:shadow-lg`}
+                            >
+                                {link.icon}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

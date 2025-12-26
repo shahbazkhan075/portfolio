@@ -18,45 +18,44 @@ const Project = () => {
       technologies: ["HTML", "CSS"],
       codeLink: "https://github.com/shahbazkhan075/ecommerce",
       demoLink: "https://ecommerce-62.vercel.app/",
-       image: "./src/assets/image.png"
+      image: "./src/assets/image.png"
     },
     {
       id: 3,
       title: "Task Management App",
       description: "Collaborative task management application with real-time updates, drag-and-drop functionality.",
-      technologies: ["React", "Talwind CSS"],
+      technologies: ["React", "Tailwind CSS"],
       codeLink: "https://github.com/shahbazkhan075/quizApp",
       demoLink: "https://project3-demo.com",
-       image: "./src/assets/quiz-app-design.png"
+      image: "./src/assets/quiz-app-design.png"
     },
     {
       id: 4,
       title: "Weather App",
       description: "A responsive weather application with location-based forecasts, interactive maps, and weather alerts.",
-      technologies: ["JavaScript","OpenWeather API","HTML5 & CSS"],
+      technologies: ["JavaScript", "OpenWeather API", "HTML5 & CSS"],
       codeLink: "https://github.com/shahbazkhan075",
       demoLink: "https://somesh-tiw.github.io/Weather-App/",
-       image: "./src/assets/image copy 2.png"
+      image: "./src/assets/image copy 2.png"
     }
   ];
 
   return (
-    <section id='projects' className="py-20 px-4 bg-gray-50">
-      <div className='text-center max-w-3xl mx-auto'>
-        <h1 className='font-bold text-4xl md:text-5xl text-gray-800'>Featured Projects</h1>
-        <p className='text-xl text-gray-600 mt-4'>
+    <section id='projects' className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50">
+      <div className='text-center max-w-3xl mx-auto mb-12'>
+        <h1 className='font-bold text-3xl md:text-4xl text-gray-800 mb-4'>Featured Projects</h1>
+        <p className='text-base md:text-xl text-gray-600'>
           Here are some of my recent projects that showcase my skills and expertise
         </p>
       </div>
-  
+
       {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto mt-16">
-        <div className="grid ml-17 md:grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white w-130 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              
+            <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Image Container */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 md:h-56 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -66,8 +65,8 @@ const Project = () => {
               
               {/* Details */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-3">{project.title}</h2>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">{project.title}</h2>
+                <p className="text-gray-600 mb-4">
                   {project.description}
                 </p>
                 
@@ -84,12 +83,12 @@ const Project = () => {
                 </div>
                 
                 {/* Buttons */}
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <a 
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-colors duration-300 font-medium"
+                    className="flex-1 text-center px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-colors duration-300 font-medium text-sm md:text-base"
                   >
                     View Code
                   </a>
@@ -97,7 +96,7 @@ const Project = () => {
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2 border-2 border-blue-800 text-gray-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300 font-medium"
+                    className="flex-1 text-center px-4 py-2 border-2 border-blue-800 text-gray-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300 font-medium text-sm md:text-base"
                   >
                     Live Demo
                   </a>
@@ -105,14 +104,16 @@ const Project = () => {
               </div>
             </div>
           ))}
-
-         
         </div>
-         <div className='flex justify-center mt-16 '>
-            <button className='text-center px-4 py-2 w-40 border-2 border-blue-800 text-gray-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300 font-medium'
+        
+        <div className='flex justify-center mt-12'>
+          <button 
+            className='px-6 py-3 border-2 border-blue-800 text-gray-800 rounded-lg hover:bg-blue-800 hover:text-white transition-all duration-300 font-medium'
             onClick={() => window.open("https://github.com/shahbazkhan075", "_blank")}
-            >View All Post</button>
-          </div>
+          >
+            View All Projects
+          </button>
+        </div>
       </div>
     </section>
   )
