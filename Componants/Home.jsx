@@ -4,6 +4,12 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { HiDocumentArrowDown } from "react-icons/hi2";
 
 const Home = () => {
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const socialLinks = [
     {
       icon: <FaGithub />,
@@ -26,7 +32,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center px-6 md:px-12 lg:px-24 py-12 bg-gradient-to-r from-[#c9d6ff50] to-[#e2e2e277]">
+    <div id='home' className="min-h-screen flex flex-col md:flex-row justify-center items-center px-6 md:px-12 lg:px-24 py-12 bg-gradient-to-r from-[#c9d6ff50] to-[#e2e2e277]">
 
       {/* Left Content */}
       <div className='md:w-1/2 text-center md:text-left'>
@@ -50,7 +56,9 @@ const Home = () => {
 
         {/* Buttons */}
         <div className='flex flex-wrap gap-4 mb-8 justify-center md:justify-start'>
-          <button className='px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center gap-2'>
+          <button className='px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center gap-2'
+          onClick={scrollToContact}
+          >
             <MdOutlineMailOutline className='text-xl'/> Hire Me
           </button>
           <button className='px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition duration-300 flex items-center gap-2 transform hover:-translate-y-1'>
@@ -80,6 +88,7 @@ const Home = () => {
       <div className='md:w-1/2 mt-12 md:mt-0 flex justify-center'>
         <div className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl'>
           {/* Placeholder for profile image */}
+          <img src="./src/assets/profile.jpeg" alt="" />
         </div>
       </div>
     </div>

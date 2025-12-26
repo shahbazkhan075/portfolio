@@ -30,7 +30,7 @@ const Skills = () => {
     {name:'Vercel & Netlify',level:'80'},
   ]
   return (
-    <div className='bg-gradient-to-r from-[#c9d6ff50] to-[#e2e2e277] mt-25 pb-15'>
+    <div id='skills' className='bg-gradient-to-r from-[#c9d6ff50] to-[#e2e2e277] mt-25 pb-15'>
       {/* skills head */}
       <div className='text-center pt-20'>
         <h1 className='font-bold text-3xl'>Skills & Expertise</h1>
@@ -41,7 +41,7 @@ const Skills = () => {
       <div className='mt-25 flex justify-evenly'>
 
         {/* frontend */}
-        <div className="w-[280px] bg-white p-5 shadow-2xl rounded-xl">
+        <div className="w-85 bg-white p-5 shadow-2xl rounded-xl">
           {/* Heading */}
           <h1 className="flex items-center gap-2 mb-6">
             <span className="flex items-center text-blue-600">
@@ -70,7 +70,7 @@ const Skills = () => {
           </ul>
         </div>
        {/* backend */}
-         <div className="w-[280px] bg-white p-5 shadow-2xl rounded-xl">
+         <div className="w-85 bg-white p-5 shadow-2xl rounded-xl">
           {/* Heading */}
           <h1 className="flex items-center gap-2 mb-6">
             <span className="flex items-center text-blue-600">
@@ -98,7 +98,7 @@ const Skills = () => {
           </ul>
         </div>
         {/* tools & others */}
-         <div className="w-[280px] bg-white p-5 shadow-2xl rounded-xl">
+         <div className="w-85 bg-white p-5 shadow-2xl rounded-xl">
           {/* Heading */}
           <h1 className="flex items-center gap-2 mb-6">
             <span className="flex items-center text-blue-600">

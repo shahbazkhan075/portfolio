@@ -6,7 +6,7 @@ import { GrStorage } from "react-icons/gr";
 const About = () => {
     const skills = ['HTML', 'CSS', 'JAVASCRIPT', 'REACT JS', 'EXPRESS JS', 'NODE JS', 'MONGODB']
     return (
-        <div className='mt-15 '>
+        <div id='about' className='mt-15 '>
             {/* header for about */}
             <div className='text-center'>
                 <h1 className='font-bold text-3xl'>About Me</h1>
@@ -45,7 +45,7 @@ const About = () => {
                         <div className='flex items-center gap-3 bg-blue-100 p-2 rounded mt-5'>
                             <div className='flex text-blue-600 font-bold'><SlArrowLeft /><SlArrowRight /></div>
                             <div>
-                                <p className='font-bold'>50+ </p>
+                                <p className='font-bold'>20+ </p>
                                 <p>Projects Completed </p>
                             </div>
                         </div>
